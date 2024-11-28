@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./calculator.css">
+</head>
+<body>
+    <div id="calculator">
+        <input type="text" name="text" id="input">
+        <button id="div1" onclick="remove()">AC</button>
+        <button id="div2" onclick="remove()">DEL</button>
+        <button id="div3" onclick="display('/')">/</button>
+        <button id="div4" onclick="display('*')">*</button>
+        <button id="div5" onclick="display(7)">7</button>
+        <button id="div6" onclick="display(8)">8</button>
+        <button id="div7" onclick="display(9)">9</button>
+        <button id="div8" onclick="display('-')">-</button>
+        <button id="div9" onclick="display(6)">6</button>
+        <button id="div10" onclick="display(5)">5</button>
+        <button id="div11" onclick="display(4)">4</button>
+        <button id="div12" onclick="display('+')">+</button>
+        <button id="div13" onclick="display(1)">1</button>
+        <button id="div14" onclick="display(2)">2</button>
+        <button id="div15" onclick="display(3)">3</button>
+        <button id="div16" onclick="result()">=</button>
+        <button id="div17" onclick="display(0)">0</button>
+        <button id="div18" onclick="display('.')">.</button>
+        <p style="color: white; text-align: center; font-size: 22px;grid-column-start: 1; grid-column-end: 5;">Developed by vineela</p>
+    </div>
+
+    <script>
+        function display(value) {
+            document.getElementById("input").value+=value
+        }
+        function result() {
+           let x=document.getElementById("input").value
+           console.log(x);
+           document.getElementById("input").value=eval(x);
+            
+        }
+        function remove() {
+            document.getElementById("input").value=" "
+        }
+        function removechild() {
+            Document.getElementById("input").value=" "
+        }
+        let str = "Hello, World!";
+console.log("Original String:", str);
+
+// Convert the string to an array of characters
+let charArray = str.split(""); // Splits the string into an array of characters
+
+// Use pop() to remove the last element
+let removedChar = charArray.pop();
+console.log("Removed Character:", removedChar);
+
+// Convert the array back to a string
+let newStr = charArray.join(""); // Joins the array back into a string
+console.log("New String:", newStr);
+    </script>
+</body>
+</html>
